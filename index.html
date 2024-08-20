@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSR Motors Lead Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>HSR Motors Lead Management</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showScreen('lead-listing')">Lead Listing</a></li>
+                    <li><a href="#" onclick="showScreen('lead-details')">Lead Details</a></li>
+                    <li><a href="#" onclick="showScreen('lead-management')">Lead Management</a></li>
+                    <li><a href="#" onclick="showScreen('dashboard')">Dashboard</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Screen 1: Lead Listing -->
+        <section id="lead-listing" class="screen">
+            <h2>Lead Listing</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="lead-list">
+                    <!-- Lead rows will be populated here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Screen 2: Lead Details -->
+        <section id="lead-details" class="screen">
+            <h2>Lead Details</h2>
+            <div id="lead-details-content">
+                <!-- Lead details will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Screen 3: Lead Management -->
+        <section id="lead-management" class="screen">
+            <h2>Lead Management</h2>
+            <form id="lead-form">
+                <label for="lead-name">Name:</label>
+                <input type="text" id="lead-name" name="lead-name" required>
+
+                <label for="lead-status">Status:</label>
+                <select id="lead-status" name="lead-status" required>
+                    <option value="New">New</option>
+                    <option value="Contacted">Contacted</option>
+                    <option value="Not Interested">Not Interested</option>
+                    <option value="Qualified">Qualified</option>
+                </select>
+
+                <button type="submit">Save Lead</button>
+            </form>
+        </section>
+
+        <!-- Screen 4: Dashboard -->
+        <section id="dashboard" class="screen">
+            <h2>Dashboard</h2>
+            <div id="dashboard-content">
+                <!-- Dashboard content will be displayed here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
